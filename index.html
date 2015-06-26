@@ -1,20 +1,23 @@
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OMS TEST</title>
+    <title>OMS微信版</title>
+
     <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/oms.css" />
     <script src="js/vendor/modernizr.js"></script>
   </head>
-  <body style="background:#f4f4f4">
+  <body class="oms_body">
     
 <div class="off-canvas-wrap" data-offcanvas>
   <div class="inner-wrap">
     <nav class="tab-bar info">
 
       <section class="middle tab-bar-section">
-        <h1 class="title">OMS订单查看</h1>
+        <h1 class="title">销售订单列表</h1>
       </section>
 
       <section class="right-small">
@@ -24,14 +27,13 @@
     
     <aside class="right-off-canvas-menu">
       <ul class="off-canvas-list">
-      <li><img src="img/m1.png" /></li>
+      <li class="text-center"><img src="img/01.png" /></li>
        <li><label>个人信息</label></li>
-    	 <li><a href="#">新疆乌鲁木齐制药厂</a></li>
-    		<li><a href="#">李媛媛</a></li>
-       <li><label>订单显示选择</label></li>
-    	 <li><a href="#">按时间排序</a></li>
-    		<li><a href="#">按客户排序</a></li>
-        <li><a href="#">按金额排序</a></li>
+    	 <li><label>公司名称</label></li>
+    		<li><label>用户名称</label></li>
+       <li><label><img src="img/search64.ico" />按时间排序</label></li>
+    	 <li><label><img src="img/search64.ico" />按客户排序</label></li>
+    		<li><label><img src="img/search64.ico" />按金额排序</label></li>
       </ul>
     </aside>
 
@@ -42,61 +44,76 @@
                               <div class="row">
                                 <div class="columns small-12 small-centered"> 
                                   <ul class="pricing-table">
-                                    <li class="title">
-                                        <div class="row" style=" font-size:10px">
-                                          <div class="columns small-6 text-left">NO.1234567890</div>
-                                          <div class="columns small-6 text-right">2015-06-08</div>
+                                    <li id="oms_list_title" class="title">
+                                        <div class="row">
+                                          <div class="columns small-6 text-left">订单号:NO.1234567890</div>
+                                          <div class="columns small-6 text-right">日期:2015-06-08</div>
                                         </div>
                                     </li>
                                     <li class="bullet-item" >          
                                         <div class="row">
-                                          <div class="columns small-3"><img src="img/m3.png" /></div>
-                                          <div class="columns small-9 text-left" style="word-break:break-all;">
+                                          <div class="columns small-2 text-center"><img src="./img/search64.ico" /></div>
+                                          <div class="columns small-10 text-left oms_content_text">
                                             <span><strong>北京万事达娱乐有限公司石景山区分公司312办公室</strong><br/></span>
-                                            <div style="font-size:large; color:#CC3366; padding:5px 0;"><span>&yen;123456789.99<br/></span></div>
+                                            <div class="oms_dollar"><span>&yen;123456789.99<br/></span></div>
                                             <div class="row">
-                                              <div class="columns small-6 text-left">20150件</div>
-                                              <div class="columns small-6 text-left">欧阳小飞</div>
+                                              <div class="columns small-6 text-left">数量:20150件</div>
+                                              <div class="columns small-6 text-left">状态:已发货</div>
                                             </div>
                                           </div>
                                         </div> 
                                     </li>
-                                    <li class="description" style="background:#F6F6F6">
+                                    <li class="bullet-item" >          
                                         <div class="row">
-                                          <div class="columns small-8 text-left"><label class="label success">已催单</label> <label class="label info">大客户</label></div>
-                                          <div class="columns small-4 text-right">详细信息></div>
+                                          <div class="columns small-6">交货日期：XXXX-XX-XX</div>
+                                          <div class="columns small-6 text-left oms_content_text">预计交货日期: <label class="label info">已延期</label> </div>
+                      
+                                        </div> 
+                                    </li>
+                                    <li id="oms_list_description" class="description">
+                                        <div class="row">
+                                          <div class="columns small-8 text-left"><label class="label info">已催单</label> <label class="label info">大客户</label></div>
+                                          <div class="columns small-4 text-right"><label class="label info">详细信息</label> </div>
                                         </div>           
                                     </li>
                                   </ul>
                                 </div>
                               </div>
                           
+                              <!-- tmp content here -->
                               <div class="row">
                                 <div class="columns small-12 small-centered"> 
                                   <ul class="pricing-table">
-                                    <li class="title">
-                                        <div class="row" style=" font-size:10px">
-                                          <div class="columns small-6 text-left">NO.1234567890</div>
-                                          <div class="columns small-6 text-right">2015-06-08</div>
+                                    <li id="oms_list_title" class="title">
+                                        <div class="row">
+                                          <div class="columns small-6 text-left">订单号:NO.1234567890</div>
+                                          <div class="columns small-6 text-right">日期:2015-06-08</div>
                                         </div>
                                     </li>
                                     <li class="bullet-item" >          
                                         <div class="row">
-                                          <div class="columns small-3"><img src="img/m3.png" /></div>
-                                          <div class="columns small-9 text-left" style="word-break:break-all;">
+                                          <div class="columns small-2 text-center"><img src="./img/search64.ico" /></div>
+                                          <div class="columns small-10 text-left oms_content_text">
                                             <span><strong>北京万事达娱乐有限公司石景山区分公司312办公室</strong><br/></span>
-                                            <div style="font-size:large; color:#CC3366; padding:5px 0;"><span>&yen;123456789.99<br/></span></div>
+                                            <div class="oms_dollar"><span>&yen;123456789.99<br/></span></div>
                                             <div class="row">
-                                              <div class="columns small-6 text-left">20150件</div>
-                                              <div class="columns small-6 text-left">欧阳小飞</div>
+                                              <div class="columns small-6 text-left">数量:20150件</div>
+                                              <div class="columns small-6 text-left">状态:已发货</div>
                                             </div>
                                           </div>
                                         </div> 
                                     </li>
-                                    <li class="description" style="background:#F6F6F6">
+                                    <li class="bullet-item" >          
                                         <div class="row">
-                                          <div class="columns small-8 text-left"><label class="label success">已催单</label> <label class="label info">大客户</label></div>
-                                          <div class="columns small-4 text-right">详细信息></div>
+                                          <div class="columns small-6">交货日期：XXXX-XX-XX</div>
+                                          <div class="columns small-6 text-left oms_content_text">预计交货日期: <label class="label info">已延期</label> </div>
+                      
+                                        </div> 
+                                    </li>
+                                    <li id="oms_list_description" class="description">
+                                        <div class="row">
+                                          <div class="columns small-8 text-left"><label class="label info">已催单</label> <label class="label info">大客户</label></div>
+                                          <div class="columns small-4 text-right"><label class="label info">详细信息</label> </div>
                                         </div>           
                                     </li>
                                   </ul>
@@ -105,34 +122,83 @@
                               <div class="row">
                                 <div class="columns small-12 small-centered"> 
                                   <ul class="pricing-table">
-                                    <li class="title">
-                                        <div class="row" style=" font-size:10px">
-                                          <div class="columns small-6 text-left">NO.1234567890</div>
-                                          <div class="columns small-6 text-right">2015-06-08</div>
+                                    <li id="oms_list_title" class="title">
+                                        <div class="row">
+                                          <div class="columns small-6 text-left">订单号:NO.1234567890</div>
+                                          <div class="columns small-6 text-right">日期:2015-06-08</div>
                                         </div>
                                     </li>
                                     <li class="bullet-item" >          
                                         <div class="row">
-                                          <div class="columns small-3"><img src="img/m3.png" /></div>
-                                          <div class="columns small-9 text-left" style="word-break:break-all;">
+                                          <div class="columns small-2 text-center"><img src="./img/search64.ico" /></div>
+                                          <div class="columns small-10 text-left oms_content_text">
                                             <span><strong>北京万事达娱乐有限公司石景山区分公司312办公室</strong><br/></span>
-                                            <div style="font-size:large; color:#CC3366; padding:5px 0;"><span>&yen;123456789.99<br/></span></div>
+                                            <div class="oms_dollar"><span>&yen;123456789.99<br/></span></div>
                                             <div class="row">
-                                              <div class="columns small-6 text-left">20150件</div>
-                                              <div class="columns small-6 text-left">欧阳小飞</div>
+                                              <div class="columns small-6 text-left">数量:20150件</div>
+                                              <div class="columns small-6 text-left">状态:已发货</div>
                                             </div>
                                           </div>
                                         </div> 
                                     </li>
-                                    <li class="description" style="background:#F6F6F6">
+                                    <li class="bullet-item" >          
                                         <div class="row">
-                                          <div class="columns small-8 text-left"><label class="label success">已催单</label> <label class="label info">大客户</label></div>
-                                          <div class="columns small-4 text-right">详细信息></div>
+                                          <div class="columns small-6">交货日期：XXXX-XX-XX</div>
+                                          <div class="columns small-6 text-left oms_content_text">预计交货日期: <label class="label info">已延期</label> </div>
+                      
+                                        </div> 
+                                    </li>
+                                    <li id="oms_list_description" class="description">
+                                        <div class="row">
+                                          <div class="columns small-8 text-left"><label class="label info">已催单</label> <label class="label info">大客户</label></div>
+                                          <div class="columns small-4 text-right"><label class="label info">详细信息</label> </div>
                                         </div>           
                                     </li>
                                   </ul>
                                 </div>
-                              </div>      
+                              </div>
+                              
+                              <div class="row">
+                                <div class="columns small-12 small-centered"> 
+                                  <ul class="pricing-table">
+                                    <li id="oms_list_title" class="title">
+                                        <div class="row">
+                                          <div class="columns small-6 text-left">订单号:NO.1234567890</div>
+                                          <div class="columns small-6 text-right">日期:2015-06-08</div>
+                                        </div>
+                                    </li>
+                                    <li class="bullet-item" >          
+                                        <div class="row">
+                                          <div class="columns small-2 text-center"><img src="./img/search64.ico" /></div>
+                                          <div class="columns small-10 text-left oms_content_text">
+                                            <span><strong>北京万事达娱乐有限公司石景山区分公司312办公室</strong><br/></span>
+                                            <div class="oms_dollar"><span>&yen;123456789.99<br/></span></div>
+                                            <div class="row">
+                                              <div class="columns small-6 text-left">数量:20150件</div>
+                                              <div class="columns small-6 text-left">状态:已发货</div>
+                                            </div>
+                                          </div>
+                                        </div> 
+                                    </li>
+                                    <li class="bullet-item" >          
+                                        <div class="row">
+                                          <div class="columns small-6">交货日期：XXXX-XX-XX</div>
+                                          <div class="columns small-6 text-left oms_content_text">预计交货日期: <label class="label info">已延期</label> </div>
+                      
+                                        </div> 
+                                    </li>
+                                    <li id="oms_list_description" class="description">
+                                        <div class="row">
+                                          <div class="columns small-8 text-left"><label class="label info">已催单</label> <label class="label info">大客户</label></div>
+                                          <div class="columns small-4 text-right"><label class="label info">详细信息</label> </div>
+                                        </div>           
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>                                                            
+                                                            
+                              
+                              <!-- tmp content here -->
       
       
     </section>
@@ -145,7 +211,10 @@
     <br/>
     <section id="footer">
     	<div class="row">
-      	<div class="columns small-11 small-centered small-text-center"><h6 class="subheader">Powered by DRAGONZYC.</h6></div>
+      	<div class="columns small-11 small-centered small-text-center oms_footer">
+        	Powered by DRAGONZYC&nbsp;&nbsp;|&nbsp;&nbsp;蓝海协同
+        </div>
+
       </div>
     </section>
     

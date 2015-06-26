@@ -1,0 +1,41 @@
+/*! oms.css v0.1 | MIT License | github.com/dragonzyc */
+
+/**
+ * 1. oms list all styele for id
+ **/
+ 
+ 
+/* IDselectors definitions
+   ========================================================================== */
+
+#oms_list_title {
+	font-size:12px; 
+	background:#080978
+}
+
+#oms_list_description{
+	background:#F6F6F6;
+	PADDING:0.3REM
+}
+
+
+/* classes definitions
+   ========================================================================== */
+.oms_body{
+	background:#f4f4f4
+}
+.oms_content_text {
+	word-break:break-all;
+}
+
+.oms_dollar{
+	font-size:14px; 
+	color:#008C06; 
+	padding:5px 0;
+}
+
+.oms_footer{
+	font-size:12px; 
+	color:#333; 
+	padding:5px 0;
+}
